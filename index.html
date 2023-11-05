@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <!-- Ensure the path to main.js is correct. If main.js is in the same directory, the path below is correct. -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="FormDiv"> 
+        <form class="vacation-form">
+            <select name="airportOri" id="Origin">
+                <option value="blank"> - - - </option>
+                <option value="DFW">DFW</option>
+                <option value="JFK">JFK</option>
+                <option value="LAX">LAX</option>
+                <option value="ORD">ORD</option>
+                <option value="GSO">GSO</option>
+                <option value="ATL">ATL</option>
+                <option value="DEN">DEN</option>
+                <option value="CLT">CLT</option>
+                <option value="LAS">LAS</option>
+                <option value="PHX">PHX</option>
+                <option value="MCO">MCO</option>
+                <option value="SEA">SEA</option>
+                <option value="MIA">MIA</option>
+                <option value="IAH">IAH</option>
+                <option value="FLL">FLL</option>
+                <option value="BWI">BWI</option>
+                <option value="SFO">SFO</option>
+                <option value="EWR">EWR</option>
+                <option value="MSP">MSP</option>
+                <option value="DTW">DTW</option>
+                <option value="BOS">BOS</option>
+                <option value="TPA">TPA</option>
+                <option value="SLC">SLC</option>
+                <option value="SAN">SAN</option>
+                <option value="PHL">PHL</option>
+            </select>
+            <select name="airportDest" id="Destination">
+                <option value="blank"> - - - </option>
+                <option value="DFW">DFW</option>
+                <option value="JFK">JFK</option>
+                <option value="LAX">LAX</option>
+                <option value="ORD">ORD</option>
+                <option value="GSO">GSO</option>
+                <option value="ATL">ATL</option>
+                <option value="DEN">DEN</option>
+                <option value="CLT">CLT</option>
+                <option value="LAS">LAS</option>
+                <option value="PHX">PHX</option>
+                <option value="MCO">MCO</option>
+                <option value="SEA">SEA</option>
+                <option value="MIA">MIA</option>
+                <option value="IAH">IAH</option>
+                <option value="FLL">FLL</option>
+                <option value="BWI">BWI</option>
+                <option value="SFO">SFO</option>
+                <option value="EWR">EWR</option>
+                <option value="MSP">MSP</option>
+                <option value="DTW">DTW</option>
+                <option value="BOS">BOS</option>
+                <option value="TPA">TPA</option>
+                <option value="SLC">SLC</option>
+                <option value="SAN">SAN</option>
+                <option value="PHL">PHL</option>
+            </select>
+
+            <input type="text" id="IntervalStart" name="input3" placeholder="Search Start">
+
+            <input type="text" id="IntervalEnd" name="input4" placeholder="Search End">
+            
+            <input type="text" id="TripLength" name="input5" placeholder="Vacation Length">
+            
+            <!-- Add a submit button if needed -->
+            <input type="button" value="Submit" onclick="callGenerate()">
+            <input type="button" value="Test" onclick="printRoundTrip()">
+        </form>
+        <a href="second.html">My Trips</a>
+
+    </div>
+    
+    <!-- Your content goes here -->
+    <!-- The 'defer' attribute in the script tag ensures that main.js runs after the HTML document is fully parsed -->
+</body>
+</html>

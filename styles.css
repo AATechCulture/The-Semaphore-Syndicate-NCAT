@@ -1,0 +1,30 @@
+.vacation-form {
+    display: flex; /* Use flexbox to layout children horizontally */
+    gap: 10px; /* Optional: adds some space between the inputs */
+}
+
+.vacation-form input[type="text"] {
+    width: 150px;
+    flex: 1; /* Each text input will take up an equal amount of space */
+    padding: 15px 3px; /* Optional: for better text input appearance */
+
+}
+
+.vacation-form input[type="submit"] {
+    /* Style your submit button if needed */
+}
+
+#FormDiv {
+    width: 500px;
+    margin-top: 780px;
+    margin-left: 630px;
+}
+
+body {
+    background-image: url('AAWebsiteScreenShot.png');
+    background-size: contain; /* Cover the entire viewport */
+    background-position: center center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Keep the image fixed during scroll */
+    margin: 0;
+}
