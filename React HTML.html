@@ -1,0 +1,294 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+  <link rel="icon" href="http://localhost:3000/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Web site created using create-react-app">
+  <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+  <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+  -->
+  <link rel="manifest" href="http://localhost:3000/manifest.json">
+  <!--
+    Notice the use of  in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+  <title>React App</title>
+<script defer="" src="./React App_files/bundle.js.download"></script><style>body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.App {
+text-align: center;
+}
+
+.App-link {
+color: #ffffff;
+}
+
+.header {
+background: linear-gradient(to right, #43a5e6, #043afc);
+color: rgb(131, 30, 30);
+font-size: 30px;
+align-items: center;
+display: flex;
+justify-content: center; /* Center the menu items horizontally */
+align-items: center;
+
+}
+.menu {
+list-style: none;
+padding-left: 100;
+display: flex;
+justify-content: center; /* Center the menu items horizontally */
+align-items: center;
+
+}
+.item{
+padding: 20px;
+color: #ffffff;
+}
+.logo{
+font-size: 50px;
+color: rgb(136, 28, 28)c0c;
+font-weight: bold;
+}
+.flight-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.flight {
+width: calc(50% - 10px); /* Two flights per row with some spacing */
+background-color: #fff;
+padding: 20px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-info {
+align-items: center;
+margin-right: 20px;
+text-align: left;
+}
+
+.flight h2 {
+font-size: 24px;
+color: #333;
+margin: 0;
+}
+
+.flight p {
+margin: 10px 0;
+font-size: 16px;
+color: #555;
+}
+
+.airplane-image img {
+width: 100%;
+max-width: 400px; /* Set a maximum width if needed */
+height: auto;
+align-self: flex-end;
+margin-left: auto;
+float: right;
+}
+
+.footer {
+background: linear-gradient(to right, #43a5e6, #043afc);
+color: white;
+padding: 10px 0;
+}
+
+/* Add these styles to your CSS file */
+.buttons {
+display: flex;
+margin-top: 10px;
+}
+
+.yes-button, .no-button {
+padding: 10px 20px;
+margin-right: 10px;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+font-size: 16px;
+}
+
+.yes-button {
+background-color: blue;
+color: white;
+}
+
+.no-button {
+background-color: rgba(255, 255, 255, 0.885);
+color: blue;
+border: 2px solid blue;
+}
+
+.yes-button:hover {
+background-color: rgb(173, 200, 230); /* Change background color on hover */
+color: navy; /* Change text color on hover */
+}
+
+.no-button:hover {
+background-color: rgb(0, 4, 229); /* Change background color on hover */
+color: rgb(252, 252, 252); /* Change text color on hover */
+}
+
+img {
+width: 250px; /* Set the width of the image to 150 pixels */
+height: auto; /* Automatically adjust the height to maintain aspect ratio */
+max-width: 100%; /* Ensure the image doesn't exceed its original size */
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHVEQUF1RDtFQUN2RCx1QkFBdUI7RUFDdkIsZUFBZTtFQUNmLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IsdUJBQXVCLEVBQUUsdUNBQXVDO0VBQ2hFLG1CQUFtQjs7QUFFckI7QUFDQTtFQUNFLGdCQUFnQjtFQUNoQixpQkFBaUI7RUFDakIsYUFBYTtFQUNiLHVCQUF1QixFQUFFLHVDQUF1QztFQUNoRSxtQkFBbUI7O0FBRXJCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsY0FBYztBQUNoQjtBQUNBO0VBQ0UsZUFBZTtFQUNmLDBCQUEwQjtBQUM1QixpQkFBaUI7QUFDakI7QUFDQTtFQUNFLGFBQWE7RUFDYixlQUFlO0VBQ2YsOEJBQThCO0FBQ2hDOztBQUVBO0VBQ0UsdUJBQXVCLEVBQUUsMENBQTBDO0VBQ25FLHNCQUFzQjtFQUN0QixhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsd0NBQXdDO0FBQzFDOztBQUVBO0VBQ0UsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsV0FBVztFQUNYLFNBQVM7QUFDWDs7QUFFQTtFQUNFLGNBQWM7RUFDZCxlQUFlO0VBQ2YsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztFQUNYLGdCQUFnQixFQUFFLGtDQUFrQztFQUNwRCxZQUFZO0VBQ1osb0JBQW9CO0VBQ3BCLGlCQUFpQjtFQUNqQixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSx1REFBdUQ7RUFDdkQsWUFBWTtFQUNaLGVBQWU7QUFDakI7O0FBRUEsc0NBQXNDO0FBQ3RDO0VBQ0UsYUFBYTtFQUNiLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSw0Q0FBNEM7RUFDNUMsV0FBVztFQUNYLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLG9DQUFvQyxFQUFFLHFDQUFxQztFQUMzRSxXQUFXLEVBQUUsK0JBQStCO0FBQzlDOztBQUVBO0VBQ0UsZ0NBQWdDLEVBQUUscUNBQXFDO0VBQ3ZFLHlCQUF5QixFQUFFLCtCQUErQjtBQUM1RDs7QUFFQTtFQUNFLFlBQVksRUFBRSw2Q0FBNkM7RUFDM0QsWUFBWSxFQUFFLDZEQUE2RDtFQUMzRSxlQUFlLEVBQUUsc0RBQXNEO0FBQ3pFIiwic291cmNlc0NvbnRlbnQiOlsiLkFwcCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLkFwcC1saW5rIHtcbiAgY29sb3I6ICNmZmZmZmY7XG59XG5cbi5oZWFkZXIge1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICM0M2E1ZTYsICMwNDNhZmMpO1xuICBjb2xvcjogcmdiKDEzMSwgMzAsIDMwKTtcbiAgZm9udC1zaXplOiAzMHB4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsgLyogQ2VudGVyIHRoZSBtZW51IGl0ZW1zIGhvcml6b250YWxseSAqL1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBcbn1cbi5tZW51IHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgcGFkZGluZy1sZWZ0OiAxMDA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyOyAvKiBDZW50ZXIgdGhlIG1lbnUgaXRlbXMgaG9yaXpvbnRhbGx5ICovXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIFxufVxuLml0ZW17XG4gIHBhZGRpbmc6IDIwcHg7XG4gIGNvbG9yOiAjZmZmZmZmO1xufVxuLmxvZ297XG4gIGZvbnQtc2l6ZTogNTBweDtcbiAgY29sb3I6IHJnYigxMzYsIDI4LCAyOCljMGM7XG5mb250LXdlaWdodDogYm9sZDtcbn1cbi5mbGlnaHQtbGlzdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4uZmxpZ2h0IHtcbiAgd2lkdGg6IGNhbGMoNTAlIC0gMTBweCk7IC8qIFR3byBmbGlnaHRzIHBlciByb3cgd2l0aCBzb21lIHNwYWNpbmcgKi9cbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgcGFkZGluZzogMjBweDtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYztcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBib3gtc2hhZG93OiAwIDRweCA4cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xufVxuXG4uZmxpZ2h0LWluZm8ge1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBtYXJnaW4tcmlnaHQ6IDIwcHg7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG59XG5cbi5mbGlnaHQgaDIge1xuICBmb250LXNpemU6IDI0cHg7XG4gIGNvbG9yOiAjMzMzO1xuICBtYXJnaW46IDA7XG59XG5cbi5mbGlnaHQgcCB7XG4gIG1hcmdpbjogMTBweCAwO1xuICBmb250LXNpemU6IDE2cHg7XG4gIGNvbG9yOiAjNTU1O1xufVxuXG4uYWlycGxhbmUtaW1hZ2UgaW1nIHtcbiAgd2lkdGg6IDEwMCU7XG4gIG1heC13aWR0aDogNDAwcHg7IC8qIFNldCBhIG1heGltdW0gd2lkdGggaWYgbmVlZGVkICovXG4gIGhlaWdodDogYXV0bztcbiAgYWxpZ24tc2VsZjogZmxleC1lbmQ7XG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICBmbG9hdDogcmlnaHQ7XG59XG5cbi5mb290ZXIge1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICM0M2E1ZTYsICMwNDNhZmMpO1xuICBjb2xvcjogd2hpdGU7XG4gIHBhZGRpbmc6IDEwcHggMDtcbn1cblxuLyogQWRkIHRoZXNlIHN0eWxlcyB0byB5b3VyIENTUyBmaWxlICovXG4uYnV0dG9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG59XG5cbi55ZXMtYnV0dG9uLCAubm8tYnV0dG9uIHtcbiAgcGFkZGluZzogMTBweCAyMHB4O1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogMjBweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi55ZXMtYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmx1ZTtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4ubm8tYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjg4NSk7XG4gIGNvbG9yOiBibHVlO1xuICBib3JkZXI6IDJweCBzb2xpZCBibHVlO1xufVxuXG4ueWVzLWJ1dHRvbjpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigxNzMsIDIwMCwgMjMwKTsgLyogQ2hhbmdlIGJhY2tncm91bmQgY29sb3Igb24gaG92ZXIgKi9cbiAgY29sb3I6IG5hdnk7IC8qIENoYW5nZSB0ZXh0IGNvbG9yIG9uIGhvdmVyICovXG59XG5cbi5uby1idXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMCwgNCwgMjI5KTsgLyogQ2hhbmdlIGJhY2tncm91bmQgY29sb3Igb24gaG92ZXIgKi9cbiAgY29sb3I6IHJnYigyNTIsIDI1MiwgMjUyKTsgLyogQ2hhbmdlIHRleHQgY29sb3Igb24gaG92ZXIgKi9cbn1cblxuaW1nIHtcbiAgd2lkdGg6IDI1MHB4OyAvKiBTZXQgdGhlIHdpZHRoIG9mIHRoZSBpbWFnZSB0byAxNTAgcGl4ZWxzICovXG4gIGhlaWdodDogYXV0bzsgLyogQXV0b21hdGljYWxseSBhZGp1c3QgdGhlIGhlaWdodCB0byBtYWludGFpbiBhc3BlY3QgcmF0aW8gKi9cbiAgbWF4LXdpZHRoOiAxMDAlOyAvKiBFbnN1cmUgdGhlIGltYWdlIGRvZXNuJ3QgZXhjZWVkIGl0cyBvcmlnaW5hbCBzaXplICovXG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.App {
+text-align: center;
+}
+
+.App-link {
+color: #61dafb;
+}
+
+.header {
+background-color: #0077c0;
+color: rgb(122, 3, 3);
+font-size: 30px;
+align-items: center;
+}
+.menu {
+list-style: none;
+padding-left: 100;
+display: flex;
+justify-content: center; /* Center the menu items horizontally */
+align-items: center;
+
+}
+.item{
+padding: 20px;
+}
+.logo{
+font-size: 50px;
+color: rgb(236, 4, 4)c0c;
+font-weight: 400;
+}
+.flight-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.flight {
+width: calc(50% - 10px); /* Two flights per row with some spacing */
+background-color: #fff;
+padding: 20px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-info {
+align-items: center;
+margin-right: 20px;
+text-align: left;
+}
+
+.flight h2 {
+font-size: 24px;
+color: #333;
+margin: 0;
+}
+
+.flight p {
+margin: 10px 0;
+font-size: 16px;
+color: #555;
+}
+
+.airplane-image img {
+width: 100%;
+max-width: 400px; /* Set a maximum width if needed */
+height: auto;
+align-self: flex-end;
+margin-left: auto;
+float: right;
+}
+
+.footer {
+background-color: #0077c0;
+color: white;
+padding: 10px 0;
+}
+
+/* Add these styles to your CSS file */
+.buttons {
+display: flex;
+margin-top: 10px;
+}
+
+.yes-button, .no-button {
+padding: 10px 20px;
+margin-right: 10px;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+font-size: 16px;
+}
+
+.yes-button {
+background-color: blue;
+color: white;
+}
+
+.no-button {
+background-color: red;
+color: white;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixxQkFBcUI7RUFDckIsZUFBZTtFQUNmLG1CQUFtQjtBQUNyQjtBQUNBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtFQUNqQixhQUFhO0VBQ2IsdUJBQXVCLEVBQUUsdUNBQXVDO0VBQ2hFLG1CQUFtQjs7QUFFckI7QUFDQTtFQUNFLGFBQWE7QUFDZjtBQUNBO0VBQ0UsZUFBZTtFQUNmLHdCQUF3QjtBQUMxQixnQkFBZ0I7QUFDaEI7QUFDQTtFQUNFLGFBQWE7RUFDYixlQUFlO0VBQ2YsOEJBQThCO0FBQ2hDOztBQUVBO0VBQ0UsdUJBQXVCLEVBQUUsMENBQTBDO0VBQ25FLHNCQUFzQjtFQUN0QixhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsd0NBQXdDO0FBQzFDOztBQUVBO0VBQ0UsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsV0FBVztFQUNYLFNBQVM7QUFDWDs7QUFFQTtFQUNFLGNBQWM7RUFDZCxlQUFlO0VBQ2YsV0FBVztBQUNiOztBQUVBO0VBQ0UsV0FBVztFQUNYLGdCQUFnQixFQUFFLGtDQUFrQztFQUNwRCxZQUFZO0VBQ1osb0JBQW9CO0VBQ3BCLGlCQUFpQjtFQUNqQixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGVBQWU7QUFDakI7O0FBRUEsc0NBQXNDO0FBQ3RDO0VBQ0UsYUFBYTtFQUNiLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixlQUFlO0VBQ2YsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIsWUFBWTtBQUNkIiwic291cmNlc0NvbnRlbnQiOlsiLkFwcCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLkFwcC1saW5rIHtcbiAgY29sb3I6ICM2MWRhZmI7XG59XG5cbi5oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA3N2MwO1xuICBjb2xvcjogcmdiKDEyMiwgMywgMyk7XG4gIGZvbnQtc2l6ZTogMzBweDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cbi5tZW51IHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgcGFkZGluZy1sZWZ0OiAxMDA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyOyAvKiBDZW50ZXIgdGhlIG1lbnUgaXRlbXMgaG9yaXpvbnRhbGx5ICovXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIFxufVxuLml0ZW17XG4gIHBhZGRpbmc6IDIwcHg7XG59XG4ubG9nb3tcbiAgZm9udC1zaXplOiA1MHB4O1xuICBjb2xvcjogcmdiKDIzNiwgNCwgNCljMGM7XG5mb250LXdlaWdodDogNDAwO1xufVxuLmZsaWdodC1saXN0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi5mbGlnaHQge1xuICB3aWR0aDogY2FsYyg1MCUgLSAxMHB4KTsgLyogVHdvIGZsaWdodHMgcGVyIHJvdyB3aXRoIHNvbWUgc3BhY2luZyAqL1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBwYWRkaW5nOiAyMHB4O1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICBib3JkZXI6IDFweCBzb2xpZCAjY2NjO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIGJveC1zaGFkb3c6IDAgNHB4IDhweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG59XG5cbi5mbGlnaHQtaW5mbyB7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cblxuLmZsaWdodCBoMiB7XG4gIGZvbnQtc2l6ZTogMjRweDtcbiAgY29sb3I6ICMzMzM7XG4gIG1hcmdpbjogMDtcbn1cblxuLmZsaWdodCBwIHtcbiAgbWFyZ2luOiAxMHB4IDA7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgY29sb3I6ICM1NTU7XG59XG5cbi5haXJwbGFuZS1pbWFnZSBpbWcge1xuICB3aWR0aDogMTAwJTtcbiAgbWF4LXdpZHRoOiA0MDBweDsgLyogU2V0IGEgbWF4aW11bSB3aWR0aCBpZiBuZWVkZWQgKi9cbiAgaGVpZ2h0OiBhdXRvO1xuICBhbGlnbi1zZWxmOiBmbGV4LWVuZDtcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XG4gIGZsb2F0OiByaWdodDtcbn1cblxuLmZvb3RlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDc3YzA7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgcGFkZGluZzogMTBweCAwO1xufVxuXG4vKiBBZGQgdGhlc2Ugc3R5bGVzIHRvIHlvdXIgQ1NTIGZpbGUgKi9cbi5idXR0b25zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgbWFyZ2luLXRvcDogMTBweDtcbn1cblxuLnllcy1idXR0b24sIC5uby1idXR0b24ge1xuICBwYWRkaW5nOiAxMHB4IDIwcHg7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbiAgYm9yZGVyOiBub25lO1xuICBib3JkZXItcmFkaXVzOiAyMHB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuLnllcy1idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibHVlO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5uby1idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+<body data-new-gr-c-s-check-loaded="14.1045.0" data-gr-ext-installed="">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><div class="App"><div class="header"><div class="logo">American Airlines</div><ul class="menu"><li><a href="#" class="item">Book a Flight</a></li><li><a href="#" class="item">Check-In</a></li><li><a href="#" class="item">Flight Status</a></li><li><a href="#" class="item">My Trips</a></li></ul></div><div class="container"><h1>Flight Search Results</h1><div class="flight-list"><div class="flight"><div class="flight-info"><div class="airplane-image"><img src="https://www.aa.com/content/images/homepage/mobile-hero/en_US/Tail.png" alt="American Airlines Airplane"></div><h2>Flight to New York</h2><p>Start Location: </p><p>Duration: 3h 30m</p><p>Cost: $250</p><p>Start Date: July 15, 2023</p><p>End Date: July 22, 2023</p><div class="buttons"><button class="yes-button">Book</button><button class="no-button">Reject</button></div></div></div></div></div><footer class="footer"><p>© 2023 American Airlines. All rights reserved.</p></footer></div></div>
+  <!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
