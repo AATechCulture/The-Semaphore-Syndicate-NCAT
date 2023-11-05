@@ -6,7 +6,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="App.css">
   <title>Welcome to Your Flight Search Results</title>
+    <script>
+        window.onload = function() {
+            let storedData = localStorage.getItem('cheapestRoundTrip');
+            let roundTripData = JSON.parse(storedData);
+            const options = {
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit', 
+                timeZoneName: 'short',
+                timezone: 'America/New_York' // The timeZone you want to set, e.g., 'America/New_York'
+            };
 
+
+            obt = roundTripData.outboundFlight;
+            rt = roundTripData.returnFlight;
+            total = roundTripData.totalCost;
+            
+            obtDepart = obt.departureTime;
+            obtDepartDate = new Date(obtDepart);
+            obtDepartDateString = obtDepartDate.toLocaleString('en-us', options);
+            
+            obtArrival = obt.arrivalTime;
+            obtArrivalDate = new Date(obtArrival);
+            obtArrivalDateString = obtArrivalDate.toLocaleString('en-us', options);
+
+            obtOrigin = obt.origin.code;
+            obtDestination = obt.destination.code;
+            obtCost = obt.cost;
+
+            obtLat = obt.destination.location.latitude;
+            obtLong = obt.destination.location.longitude;
+
+            rtDepart = rt.departureTime;
+            rtDepartDate = new Date(rtDepart);
+            rtDepartDateString = rtDepartDate.toLocaleString('en-us', options);
+
+            rtArrival = rt.arrivalTime;
+            rtArrivalDate = new Date(rtArrival);
+            rtArrivalDateString = rtArrivalDate.toLocaleString('en-us', options);
+            rtOrigin = rt.origin.code;
+            rtDestination = rt.destination.code;
+            rtCost = rt.cost;
+
+            rtLat = rt.destination.location.latitude;
+            rtLong = rt.destination.location.longitude;
+
+            console.log(obtLat, obtLong);
+
+            var obtInfoHtml = `
+                <h2>Flight from ${obtOrigin} to ${obtDestination}</h2>
+                <p>Departure Time: ${obtDepartDateString}</p>
+                <p>Arrival Time: ${obtArrivalDateString}</p>
+                <p>Cost: $${obtCost}</p>
+            `;
+            var rtInfoHtml = `
+                <h2>Flight from ${rtOrigin} to ${rtDestination}</h2>
+                <p>Departure Time: ${rtDepartDateString}</p>
+                <p>Arrival Time: ${rtArrivalDateString}</p>
+                <p>Cost: $${rtCost}</p>
+            `;
+            
+            document.getElementById('outFlight').innerHTML = obtInfoHtml;
+            document.getElementById('returnFlight').innerHTML = rtInfoHtml;
+        }
+    </script>
 </head>
 
 <body>
@@ -27,7 +95,7 @@
           <img src="https://www.aa.com/content/images/homepage/mobile-hero/en_US/Airplane-1.png"
             alt="American Airlines Airplane">
         </div>
-        <div class="flight-info">
+        <div class="flight-info" id="outFlight">
           <h2>Flight to New York</h2>
           <p>Start Location: New Jersey</p>
           <p>Duration: 3h 30m</p>
@@ -48,7 +116,7 @@
           <img src="https://www.aa.com/content/images/homepage/mobile-hero/en_US/Tail.png"
             alt="American Airlines Airplane">
         </div>
-        <div class="flight-info">
+        <div class="flight-info" id="returnFlight">
           <h2>Flight to Another Destination</h2>
           <p>Start Location: Another Location</p>
           <p>Duration: Xh Xm</p>
