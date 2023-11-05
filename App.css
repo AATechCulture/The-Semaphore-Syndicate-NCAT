@@ -1,130 +1,103 @@
+
 body {
-	font-family: 'Arial', sans-serif;
-	margin: 0;
-	padding: 0;
-	background: #f5f5f5;
-}
-
-.header {
-	background: #003366;
-	color: #fff;
-	padding: 10px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.header .logo {
-	font-size: 24px;
-	font-weight: bold;
-}
-
-.menu {
-	list-style: none;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
-
-.menu .item {
-	color: #fff;
-	text-decoration: none;
-	padding: 10px 15px;
-	transition: background-color 0.3s ease;
-}
-
-.menu .item:hover {
-	background-color: #0057b8;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f3f3;
 }
 
 .container {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 20px;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.flight-list {
-	flex: 1;
-	max-width: 600px;
-	margin: 10px;
-	background: #fff;
-	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-	overflow: hidden;
+h1{
+  text-align: center;
+
+}
+
+.header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container h1 {
+  font-size: 36px;
+  text-align: center;
+  margin: 20px;
 }
 
 .flight {
-	padding: 20px;
-	border-bottom: 1px solid #eeeeee;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
 }
 
-.flight:last-child {
-	border-bottom: none;
+.flight-info {
+  flex: 1;
+  padding: 20px;
 }
 
 .airplane-image img {
-	max-width: 100%;
-	height: auto;
-	border-bottom: 1px solid #eeeeee;
-	padding-bottom: 20px;
-}
-
-h2 {
-	color: #333;
-	margin: 10px 0;
-}
-
-p {
-	color: #666;
-	margin: 5px 0;
+  width: 100%;
+  border-radius: 10px 0 0 10px;
 }
 
 .buttons {
-	text-align: right;
-	margin-top: 20px;
+  text-align: right;
 }
 
-button {
-	border: none;
-	outline: none;
-	padding: 10px 20px;
-	margin: 0 5px;
-	border-radius: 20px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+.buttons button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-.yes-button {
-	background-color: #4CAF50;
-	color: white;
-}
-
-.no-button {
-	background-color: #f44336;
-	color: white;
-}
-
-button:hover {
-	opacity: 0.8;
-}
-
-.Ddiv {
-	flex: 1;
-	max-width: 300px;
-	margin: 10px;
-	background: #fff;
-	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-	padding: 20px;
+.continue-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
 }
 
 .footer {
-	background: #003366;
-	color: #fff;
-	text-align: center;
-	padding: 10px 20px;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+  background-color: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
