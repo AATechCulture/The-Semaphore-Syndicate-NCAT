@@ -65,36 +65,6 @@ function callGenerate(origin, destination, start, end, interval) {
         .catch(error => {
             console.error('Error fetching one or more flight data:', error);
         });
-    
-    /*
-    days.forEach((date) => {
-        currentDay = date.toISOString().split('T')[0];
-        callString = "http://localhost:4000/flights?date=" + currentDay + "&origin=" + origin + "&destination=" + destination;
-        console.log(callString)
-        fetch(callString) // Replace with the actual URL you want to fetch from
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                // Parse the JSON in the response
-                return response.json();
-            })
-            .then(data => {
-                // Work with the JSON data here
-                // flightsArray.push(data);
-                data.forEach(flight => {
-                    if (flight.cost < cheapestFlight.cost) {
-                        cheapestFlight = flight;
-                    }
-                });
-            })
-            .catch(error => {
-                // Handle any errors here
-                console.error('There was an error fetching the JSON', error);
-            });
-    });
-
-    console.log("Sorted:", cheapestFlight);*/
 }
 function getDaysArray(start, end, interval) {
     let arr = [];
