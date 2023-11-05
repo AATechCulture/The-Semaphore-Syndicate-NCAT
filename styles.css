@@ -4,7 +4,7 @@
 }
 
 .vacation-form input[type="text"] {
-    width: 150px;
+    width: 115px;
     flex: 1; /* Each text input will take up an equal amount of space */
     padding: 15px 3px; /* Optional: for better text input appearance */
 
@@ -16,8 +16,8 @@
 
 #FormDiv {
     width: 500px;
-    margin-top: 780px;
-    margin-left: 630px;
+    margin-top: 575px;
+    margin-left: 600px;
 }
 
 body {

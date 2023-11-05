@@ -70,7 +70,10 @@
                 <p>Arrival Time: ${rtArrivalDateString}</p>
                 <p>Cost: $${rtCost}</p>
             `;
+            let totalCost = obtCost + rtCost
+            document.getElementById('TitleCost').innerHTML = "Total Cost: $" + totalCost
             
+
             document.getElementById('outFlight').innerHTML = obtInfoHtml;
             document.getElementById('returnFlight').innerHTML = rtInfoHtml;
         }
@@ -88,7 +91,7 @@
         <li><a href="#" class="item">My Trips</a></li>
       </ul>
     </div>
-    <h1>Welcome to Your Flight Search Results</h1>
+    <h1 id="TitleCost">Welcome to Your Flight Search Results</h1>
     <div class="container">
       <div class="flight">
         <div class="airplane-image">
@@ -132,7 +135,7 @@
       </div>
     </div>
 
-    <div class="continue-button">Continue</div>
+    <div class="continue-button">Book</div>
 
     <footer class="footer">
       <p>&copy; 2023 American Airlines. All rights reserved.</p>

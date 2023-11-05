@@ -60,6 +60,7 @@ function callGenerate(origin, destination, start, end, interval) {
 
             console.log("Cheapest round trip:", cheapestRoundTrip);
             localStorage.setItem('cheapestRoundTrip', JSON.stringify(cheapestRoundTrip));
+            location.href = "second.html"
         })
         .catch(error => {
             console.error('Error fetching one or more flight data:', error);
