@@ -4,27 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="App.css">
-    <title>Flight Search Results</title>
+    <title>Welcome to Your Flight Search Results</title>
     <style>
-        .container {
-            display: flex;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
         }
 
-        .flight {
-            flex: 1;
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline;
             margin-right: 20px;
         }
 
-        .flight-info {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 10px;
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
         }
 
-        .Ddiv {
+        .container h1 {
+            font-size: 36px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .flight {
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .flight-info {
             flex: 1;
-            /* Add your styling for Ddiv here */
             padding: 20px;
+        }
+
+        .airplane-image img {
+            width: 100%;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .buttons {
+            text-align: right;
+        }
+
+        .buttons button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .continue-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1;
+        }
+
+        .footer {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -39,12 +116,13 @@
                 <li><a href="#" class="item">My Trips</a></li>
             </ul>
         </div>
+        <h1>Welcome to Your Flight Search Results</h1>
         <div class="container">
             <div class="flight">
+                <div class="airplane-image">
+                    <img src="https://www.aa.com/content/images/homepage/mobile-hero/en_US/Airplane-1.png" alt="American Airlines Airplane">
+                </div>
                 <div class="flight-info">
-                    <div class="airplane-image">
-                        <img src="https://www.aa.com/content/images/homepage/mobile-hero/en_US/Airplane-1.png" alt="American Airlines Airplane">
-                    </div>
                     <h2>Flight to New York</h2>
                     <p>Start Location: New Jersey</p>
                     <p>Duration: 3h 30m</p>
@@ -60,10 +138,10 @@
 
             <!-- Copy the flight info div here -->
             <div class="flight">
+                <div class="airplane-image">
+                    <img src="https://www.aa.com/content/images/homepage/mobile-hero/en_US/Tail.png" alt="American Airlines Airplane">
+                </div>
                 <div class="flight-info">
-                    <div class="airplane-image">
-                        <img src="https://www.aa.com/content/images/homepage/mobile-hero/en_US/Tail.png" alt="American Airlines Airplane">
-                    </div>
                     <h2>Flight to Another Destination</h2>
                     <p>Start Location: Another Location</p>
                     <p>Duration: Xh Xm</p>
@@ -76,36 +154,9 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="Ddiv">
-                <!-- You can add content to your new Ddiv here -->
-                <p>This is the content of Ddiv.</p>
-            </div>
         </div>
+
+        <div class="continue-button">Continue</div>
+        
         <footer class="footer">
-            <p>&copy; 2023 American Airlines. All rights reserved.</p>
-        </footer>
-    </div>
-
-    <script>
-        function generateNewFlight() {
-            // Generate new flight details (you can customize this logic)
-            const newFlight = {
-                destination: 'New Destination',
-                startLocation: 'Old Destination',
-                duration: 'Xh Xm',
-                cost: '$YYY',
-                startDate: 'Month DD, YYYY',
-                endDate: 'Month DD, YYYY'
-            };
-
-            // You can update the flight details in the HTML here
-            document.querySelector('h2').textContent = 'Flight to ' + newFlight.destination;
-            const flightInfo = document.querySelectorAll('.flight p');
-            flightInfo[0].textContent = 'Start Location: ' + newFlight.startLocation;
-            flightInfo[1].textContent = 'Duration: ' + newFlight.duration;
-            flightInfo[2].textContent = 'Cost: ' + newFlight.cost;
-        }
-    </script>
-</body>
-</html>
+            <p>&copy; 2023 American Airlines. All rights reserved.</
